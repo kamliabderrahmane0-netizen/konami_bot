@@ -1,4 +1,4 @@
-rom telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update
+from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -9,11 +9,11 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(welcome_message, reply_markup=reply_markup)
 
 def main():
-    TOKEN = "8636218822:AAHbloHi09L-Ooh9ezaVGgCDCjoNwH0oMjg"
+    TOKEN = "8636218822:AAGfmb-Y3xk7pHDAaQH8vd8adnsblI7BccA"
     application = ApplicationBuilder().token(TOKEN).build()
     application.add_handler(CommandHandler("start", start))
     print("Bot is running...")
     application.run_polling()
 
 if __name__ == "__main__":
-    main() 
+    main()
